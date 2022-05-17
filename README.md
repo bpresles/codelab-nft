@@ -1,7 +1,7 @@
 ---
 title: Codelab - 18 Mai 2022
 tags: Training
-description: codelab pour numéro 1 pour initiation au codage d'un NFT en solidity
+description: codelab d'initiation au codage d'un NFT en solidity
 ---
 
 :point_up: Codelab NFT - 18 Mai 2022 :construction:
@@ -20,6 +20,8 @@ Le but de ce codelab est de réaliser un smart contract NFT pour une image uniqu
 :four: Deployer sur un testnet (Rinkeby)
 
 :five: Intégrer avec opensea
+
+:six: Faire un site web pour le minting
 
 Il n'y a plus qu'à suivre les :point_right: et lire attentivement les points d'information :pushpin:.
 
@@ -526,11 +528,7 @@ Une fois votre contrat déployé, une nouvelle ligne est apparu, il s'agit du co
 <kbd><img src="doc/remix-deploy-rinkeby-7.png" height="300"></kbd>
 <kbd><img src="doc/remix-deploy-rinkeby-8.png" height="300"></kbd>
  
- > :pushpin: si vous avez le temps, vous pouvez aussi échanger avec vos voisins les adresses de déploiement du contrat `Minter` et acheter des tokens entre vous.
- 
  # :ship: 5. Intégration avec OpenSea
-
-Nous arrivons à la dernière étape de ce codelab, l'intégration de votre NFT avec OpenSea. 
 
 :point_right: Rendez vous sur la page d'OpenSea et loggez vous avec Metamask (web3 login). OpenSea détecte que vous êtes connecté sur Rinkeby et vous proposera d'aller sur [https://testnets.opensea.io/](https://testnets.opensea.io/).
 
@@ -552,6 +550,7 @@ On valide et voilà ! Notre NFT est maintenant intégré à OpenSea ! :tada: :co
 <kbd><img src="doc/opensea-6.png" width="200"></kbd>
 <kbd><img src="doc/opensea-7.png" width="200"></kbd>
 
+Pour récapituler:
 
 | Content | Address |
 | --- | --- |
@@ -560,3 +559,54 @@ On valide et voilà ! Notre NFT est maintenant intégré à OpenSea ! :tada: :co
 | NFT on OpenSea | https://testnets.opensea.io/collection/mon-premier-nft-1 |
 | IPFS image | [QmU7sxwp4cT1ogYVSbNZjYYLZy4udgvZFWN7Q5wDNdMhB9](https://ipfs.io/ipfs/QmU7sxwp4cT1ogYVSbNZjYYLZy4udgvZFWN7Q5wDNdMhB9) |
 | IPFS Metadata | [QmcDcViB3iS2sqAPK7YLnoyu5xmY1LThpbjZAztikEQYT5](https://ipfs.io/ipfs/QmcDcViB3iS2sqAPK7YLnoyu5xmY1LThpbjZAztikEQYT5) |
+
+
+# :dollar: 6. Le minting website
+
+Dans cette dernière section, nous allons faire un site web pour la vente de notre token. Pour cette partie vous allez avoir besoin de `git` et de `npm` ou `yarn`. 
+
+## 6.1 Téléchargement du site web du codelab
+
+> :pushpin: Pour gagner du temps nous avons déjà développé un site web vous pourrez regarder par vous même comment est utilisé la librairie web3.js
+
+:point_right: téléchargez le repo du codelab sur votre laptop, puis rendez vous dans le répertoire du site web. Ce site utilise le framework `svelte` et est déjà codé pour pointer sur les smart contracts du codelab. 
+
+```bash
+$ git clone https://github.com/BlockchainEtSociete/codelab-18-mai-2022.git
+$ cd codelab-18-mai-2022/minting-website
+```
+
+:point_right: lancez les commandes suivantes pour installer les dépendences et tester le site web.
+
+```bash
+$ yarn
+$ yarn dev
+...
+> Listening on http://localhost:3000
+```
+
+Vous pouvez maintenant ouvrir une page sur le site web qui tourne localement: [http://localhost:3000](http://localhost:3000). 
+
+:bangbang: ce cite est actuellement configuré pour pointer vers les smart contracts déjà déployé par votre serviteur. Il va falloir le modifier pour le pointer vers vos contrats.
+
+> :pushpin: toutes les méhodes relativent aux smart contract sont dans le fichier `src/utils/ContractApi.js`, n'hésitez pas à y jeter un coup d'œil pour comprendre comment est utilisé la librairie web3.js
+
+## 6.2 Configuration du projet 
+
+Nous allons modifier le site web pour qu'il utilise les smart contracts que vous venez de déployer. 
+
+:point_right: dans le projet svelte, identifiez les fichiers `MinterFactory.json` et `NFTCollection.json` situés dans le répertoire `src/contracts`. Changez le champs `address` dans les deux fichiers pour les faire pointer vers les vrais addresses des contrats que vous avez déployé.
+
+Retournez dans le navigateur et rechargez la page, vous devriez maintenant voir votre image. 
+
+<kbd><img src="doc/minting-website-1.png" width="400"></kbd>
+<kbd><img src="doc/minting-website-2.png" width="400"></kbd>
+
+:point_right: échangez votre IP avec vos voisins pour vous connecter aux site web des autres intervenants et vous acheter des tokens entre vous!
+ 
+Ceci conclut notre codelab :clap: :clap: :clap: il ne tient qu'à vous de maintenant faire le lancement et promouvoir votre NFT ! :muscle:
+
+
+Pour ceux qui sont resté jusqu'au bout, voici le lien pour votre preuve de presence à ce codelab via POAP !!
+
+https://qr.poap.tech//#/event/FXpS8QgbUrdL6XnOmdt5
