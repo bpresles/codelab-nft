@@ -605,8 +605,3 @@ Retournez dans le navigateur et rechargez la page, vous devriez maintenant voir 
 :point_right: échangez votre IP avec vos voisins pour vous connecter aux site web des autres intervenants et vous acheter des tokens entre vous!
  
 Ceci conclut notre codelab :clap: :clap: :clap: il ne tient qu'à vous de maintenant faire le lancement et promouvoir votre NFT ! :muscle:
-
-
-Pour ceux qui sont resté jusqu'au bout, voici le lien pour votre preuve de presence à ce codelab via POAP !!
-
-https://qr.poap.tech//#/event/FXpS8QgbUrdL6XnOmdt5
