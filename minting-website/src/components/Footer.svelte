@@ -7,12 +7,12 @@
     <div>
         <p>
             <span
-                ><a href="https://twitter.com/blockchain44" target="_blank"
+                ><a href="https://twitter.com/Younup_IT" target="_blank"
                     ><img src={twitter} alt="twitter" /></a
                 ></span
             >
             <span
-                ><a href="https://github.com/BlockchainEtSociete/codelab-18-mai-2022" target="_blank"
+                ><a href="https://github.com/bpresles/codelab-nft" target="_blank"
                     ><img src={github} alt="github" /></a
                 ></span
             >

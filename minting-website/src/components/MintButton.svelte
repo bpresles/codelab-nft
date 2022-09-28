@@ -77,20 +77,20 @@
                 <div>waiting for tx hash...</div>
             {:else if status == 2}
                 <div>
-                    transaction sent: <a href="https://rinkeby.etherscan.io/tx/{txHash}"
+                    transaction sent: <a href="https://goerli.etherscan.io/tx/{txHash}"
                         >{txHash}</a
                     >
                 </div>
             {:else if status == 3}
                 <div>
                     waiting for confirmation: <a
-                        href="https://rinkeby.etherscan.io/tx/{txHash}">{txHash}</a
+                        href="https://goerli.etherscan.io/tx/{txHash}">{txHash}</a
                     >
                 </div>
             {:else if status == 4}
                 <div>
                     transaction confirmed! <a
-                        href="https://rinkeby.etherscan.io/tx/{txHash}">{txHash}</a
+                        href="https://goerli.etherscan.io/tx/{txHash}">{txHash}</a
                     >
                 </div>
                 <div>
@@ -100,7 +100,7 @@
                 <div>
                     tx failed :-(
                     {#if { txHash }}
-                        <a href="https://etherscan.io/tx/{txHash}">{txHash}</a>
+                        <a href="https://goerli.etherscan.io/tx/{txHash}">{txHash}</a>
                     {/if}
                 </div>
             {/if}

@@ -1,0 +1,11 @@
+{
+    "description": "Younup Logo", 
+    "external_url": "https://www.younup.fr", 
+    "image": "ipfs://QmYajGeUcxvzZ79ffMHxxFUN2EhKY8YZKxR7WKYpWkcrPH", 
+    "name": "Younup",
+    "attributes": {
+    	"type": "Neo-ESN",
+    	"boss": "Pierre-Marie PASSET",
+    	"specificity": "Collective intelligence"
+    }
+}

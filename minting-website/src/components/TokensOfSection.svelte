@@ -8,7 +8,7 @@
         Vous possédez actuellement {$balanceOfConnectedAccount} token
     </div>
     <div id="etherscan">
-        voir le contrat sur <a href="https://rinkeby.etherscan.io/address/{nftAddress}">etherscan</a>
+        voir le contrat sur <a href="https://goerli.etherscan.io/address/{nftAddress}">etherscan</a>
     </div>
 </div>
 {/if}

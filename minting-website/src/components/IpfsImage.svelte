@@ -18,7 +18,6 @@
   }
 
   img {
-    width: 250px;
-    height: 250px;
+    max-width: 300px;
   }
 </style>
