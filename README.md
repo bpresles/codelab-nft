@@ -1,10 +1,10 @@
 ---
-title: Codelab - 18 Mai 2022
+title: Codelab Younup
 tags: Training
 description: codelab d'initiation au codage d'un NFT en solidity
 ---
 
-:point_up: Codelab NFT - 18 Mai 2022 :construction:
+:point_up: Codelab NFT - Younup :construction:
 ===
 
 # :construction_worker: Plan de la session
@@ -78,13 +78,17 @@ Pour des raisons d'intégration du NFT avec des plateformes comme OpenSea, il es
 
 :point_right: Créez un fichier metadata comme suit en indiquant bien le CID obtenu à l'étape précédente dans le champs "image" prefixé par `ipfs://`, vous pouvez également changer les autres champs comme bon vous semble:
 
-```metadata.json
+```younup.json
 {
-    "description": "Codelab NFT - 18 Mai 2022", 
-    "external_url": "https://blockchainsociete.org", 
-    "image": "ipfs://REMPLACER-PAR-LE-CID-DE-VOTRE-IMAGE", 
-    "name": "Blockchain Et Societe",
-    "attributes": []
+    "description": "Younup Logo", 
+    "external_url": "https://www.younup.fr", 
+    "image": "ipfs://QmYajGeUcxvzZ79ffMHxxFUN2EhKY8YZKxR7WKYpWkcrPH", 
+    "name": "Younup",
+    "attributes": {
+    	"type": "Neo-ESN",
+    	"boss": "Pierre-Marie PASSET",
+    	"specificity": "Collective intelligence"
+    }
 }
 ```
 
@@ -367,13 +371,13 @@ contract MinterFactory is Minter {
     constructor() Minter(
         MintParams({
             tokenPrice: 10000000000000000,
-            artistWallet: payable(0xab57ea35F5960AB178Ea5441937b35823BCfe695),
-            maxSupply: 5
+            artistWallet: payable(0xf9F5e350699bD4dFC87cBB06d10f8Fd69f6F408e),
+            maxSupply: 20
         }),
         NFTCollectionParams({
-            name: "mon premier NFT",
-            ticker: "MPN",
-            uri: "ipfs://QmcDcViB3iS2sqAPK7YLnoyu5xmY1LThpbjZAztikEQYT5"
+            name: "Younup Logo",
+            ticker: "YNP",
+            uri: "ipfs://QmdWnnUv7LMQa8brUYaEpeFq6gdSxnuEAAuWeKfhYygrtT"
         })
     ) {}
 }
